@@ -89,7 +89,6 @@ var status_panel = document.getElementById("status-panel");
 
 //poen modal for new or edit task
 function openModal(type, task = null) {
-
     if (type === 'add') {
         modalTitle.textContent = 'New Task';
         task_id.value = '';
@@ -108,6 +107,7 @@ function openModal(type, task = null) {
         enddate.value = task.enddate;
 
         task_status.value = task.status;
+        status_panel.style.display = 'block';
     }
     task_modal.style.display = 'block';
 }
@@ -232,7 +232,6 @@ function editTask(id) {
 function attachEventListenersToEdit() {
     document.querySelectorAll('.edit-task').forEach(button => {
         button.addEventListener('click', (event) => {
-            debugger;
             const taskId = event.target.parentElement.getAttribute("data-id");
             editTask(taskId);
         });
