@@ -1,0 +1,208 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#header {
+    text-align: center;
+}
+
+#header i {
+    color: #FDBF46;
+    margin-right: .7rem;
+    font-size: 24px;
+}
+
+#header h1 {
+    display: inline-block;
+}
+
+#action {
+    margin: 2rem 0;
+}
+
+.left-section {
+    text-align: left;
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+.right-section {
+    text-align: right;
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+.left-section .btn-task {
+    margin-right: 1rem;
+}
+
+.btn-task {
+    text-decoration: none;
+    padding: .4rem 1.3rem;
+    color: #FFF;
+    border: none;
+}
+
+.active-task {
+    background-color: #54C1AD;
+    border-radius: 15px;
+}
+
+.pending-task {
+    background-color: #FDBF46;
+    border-radius: 15px;
+}
+
+.closed-task {
+    background-color: #F06A6D;
+    border-radius: 15px;
+}
+
+#add-task {
+    background-color: #5B6097;
+    border-radius: 15px;
+}
+
+#tasks {
+    margin: 2rem 0;
+    clear: both;
+    display: grid;
+}
+
+.task-section {
+    margin: 2rem 0;
+}
+
+.task-head .btn-task {
+    display: inline;
+}
+
+.task-head hr {
+    position: absolute;
+    display: inline;
+    width: 1110px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    text-align: center;
+}
+
+table th,
+table td {
+    padding: .4rem 2rem;
+}
+
+tbody tr {
+    border: 1px solid #A3A3B9;
+}
+
+tbody tr td:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+tbody tr td:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+tbody tr i.bi-record-circle-fill{
+    margin-right: 0.3rem;
+    color: #5B6097;
+}
+tbody tr i.bi-pencil-square{
+    color: #FDBF46;
+    font-size: 18px;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Header */
+.modal-header {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Modal Footer */
+.modal-footer {
+  background-color: #fff;
+  height: 40px;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 6px 16px;
+  top:20%;
+  border: 1px solid #888;
+  width: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+.modal-body label{
+   font-size: 14px;
+   font-weight: 700;
+}
+.form-group{
+    margin-bottom: .8rem;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.edit-task{
+    background-color: transparent;
+    border: none;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <section id="header">
+            <i class="bi bi-check-circle"></i>
+            <h1>Todo</h1>
+        </section>
+        <section id="action">
+            <section class="left-section">
+                <a href="javascript:void();" id="active-task" class="btn-task active-task">active</a>
+                <a href="javascript:void();" id="pending-task" class="btn-task pending-task">pending</a>
+                <a href="javascript:void();" id="closed-task" class="btn-task closed-task">closed</a>
+            </section>
+            <section class="right-section">
+                <a href="javascript:void();" id="add-task" class="btn-task">+ add</a>
+            </section>
+        </section>
+        <section id="tasks">
+            <section class="task-section active-task-section">
+                <div class="task-head">
+                    <span class="btn-task active-task">active</span>
+                    <hr>
+                </div>
+                <div class="task-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>fecha de creación</th>
+                                <th>fecha de entrega</th>
+                                <th>status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="active-task-body">
+                            <!-- <tr>
+                                <td>
+                                    <i class="bi bi-record-circle-fill"></i><span>task1</span>
+                                </td>
+                                <td>
+                                    <span>21-08-2023</span>
+                                </td>
+                                <td>
+                                    <span>29-08-2023</span>
+                                </td>
+                                <td>
+                                    <span class="btn-task active-task">active</span>
+                                </td>
+                                <td>
+                                    <a href="javascript:void();" class="edit-task">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="bi bi-record-circle-fill"></i><span>task1</span>
+                                </td>
+                                <td>
+                                    <span>21-08-2023</span>
+                                </td>
+                                <td>
+                                    <span>29-08-2023</span>
+                                </td>
+                                <td>
+                                    <span class="btn-task active-task">active</span>
+                                </td>
+                                <td>
+                                    <a href="javascript:void();" class="edit-task">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="task-section pending-task-section">
+                <div class="task-head">
+                    <span class="btn-task pending-task">pending</span>
+                    <hr>
+                </div>
+                <div class="task-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>fecha de creación</th>
+                                <th>fecha de entrega</th>
+                                <th>status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="pending-task-body">
+                            <!-- <tr>
+                                <td>
+                                    <i class="bi bi-record-circle-fill"></i><span>task1</span>
+                                </td>
+                                <td>
+                                    <span>21-08-2023</span>
+                                </td>
+                                <td>
+                                    <span>29-08-2023</span>
+                                </td>
+                                <td>
+                                    <span class="btn-task pending-task">pending</span>
+                                </td>
+                                <td>
+                                    <a href="javascript:void();" class="edit-task">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="bi bi-record-circle-fill"></i><span>task1</span>
+                                </td>
+                                <td>
+                                    <span>21-08-2023</span>
+                                </td>
+                                <td>
+                                    <span>29-08-2023</span>
+                                </td>
+                                <td>
+                                    <span class="btn-task pending-task">pending</span>
+                                </td>
+                                <td>
+                                    <a href="javascript:void();" class="edit-task">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="task-section closed-task-section">
+                <div class="task-head">
+                    <span class="btn-task closed-task">closed</span>
+                    <hr>
+                </div>
+                <div class="task-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>fecha de creación</th>
+                                <th>fecha de entrega</th>
+                                <th>status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="closed-task-body">
+                            <!-- <tr>
+                                <td>
+                                    <i class="bi bi-record-circle-fill"></i><span>task1</span>
+                                </td>
+                                <td>
+                                    <span>21-08-2023</span>
+                                </td>
+                                <td>
+                                    <span>29-08-2023</span>
+                                </td>
+                                <td>
+                                    <span class="btn-task closed-task">closed</span>
+                                </td>
+                                <td>
+                                    <a href="javascript:void();" class="edit-task">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="bi bi-record-circle-fill"></i><span>task1</span>
+                                </td>
+                                <td>
+                                    <span>21-08-2023</span>
+                                </td>
+                                <td>
+                                    <span>29-08-2023</span>
+                                </td>
+                                <td>
+                                    <span class="btn-task closed-task">closed</span>
+                                </td>
+                                <td>
+                                    <a href="javascript:void();" class="edit-task">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+    </div>
+    <!-- The Modal -->
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="id" name="id">
+                <div class="form-group">
+                    <label for="tname">Title</label>
+                    <input type="text" id="tname" name="tname" placeholder="Task Name">
+                </div>
+                <div class="form-group">
+                    <label for="sdate">Start Date</label>
+                    <input type="text" id="sdate" name="sdate" placeholder="Start Date">
+                </div>
+                <div class="form-group">
+                    <label for="edate">End Date</label>
+                    <input type="text" id="edate" name="edate" placeholder="End Date">
+                </div>
+                <div id="status-panel" class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option value="0">active</option>
+                        <option value="1">pending</option>
+                        <option value="2">closed</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="left-section">
+                    <button id="close-task" class="btn-task closed-task">close</button>
+                </div>
+                <div class="right-section">
+                    <button id="save-task" class="btn-task active-task">save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="asset/js/site.js"></script>
+</body>
+
+</html>
